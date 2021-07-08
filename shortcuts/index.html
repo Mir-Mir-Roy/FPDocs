@@ -70,11 +70,15 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#multiselection-submode">Multiselection submode:</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#one-axel-submode">One axel submode:</a>
+    <li class="toctree-l2"><a class="reference internal" href="#one-axis-submode">One axis submode:</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#bounding-box-submode">Bounding Box submode:</a>
+    <li class="toctree-l2"><a class="reference internal" href="#bounding-box-gizmo">Bounding Box Gizmo:</a>
     </li>
     </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
                     </li>
                 </ul>
       </div>
@@ -111,60 +115,68 @@
               
                 <h1 id="shortcuts-and-usage">Shortcuts and usage</h1>
 <h3 id="invoke-key">Invoke key:</h3>
-<ol>
-<li>Pressing <strong>'D'</strong> key invokes change pivot mode. While this mode is active there<br>
-   is an ability to navigate through viewport, switch submodes, change Pivot Orientation,<br>
-   set 3D Cursor and Origin.<br></li>
-</ol>
+<ul>
+<li>Pressing <strong>'D'</strong> key invokes change pivot mode. While this mode is active there
+ is an ability to navigate through viewport, switch submodes, change Pivot Orientation,
+ set 3D Cursor and Origin.</li>
+</ul>
 <h3 id="pivot-gizmo">Pivot Gizmo:</h3>
-<ol>
-<li>This visual control gives ability to set Orientation and Origin freely.<br></li>
-<li><strong>'P'</strong> button in left bottom corner switches On/Off Pivot gizmo.
- <img alt="" src="../img/gif_pivot.gif" /><br></li>
-</ol>
+<ul>
+<li>This visual control gives ability to set Orientation and Origin freely. Supports any blender object type.</li>
+<li><strong>'P'</strong> button in left bottom corner switches On/Off Pivot gizmo.</li>
+<li>There is a value next to the <strong>'P'</strong> counting Pivot's distance for current axis(<strong>'D'</strong>) when moving/incrementing the gizmo or current rounded value(<strong>'V'</strong>) when rounding value.
+ <img alt="" src="../img/gif_Pivot_gizmo.gif" /></li>
+<li><strong>Press Alt</strong> - Round current axis value. To round current decimal value to whole number
+ press Alt and move axis arrow in desired direction to floor or ceiling a value. Alt + Shift combination rounds value to first decimal place for better accuracy. For Dial Pivot value is being round to nearest whole number automatic(if 1.45 =&gt; 1.0, if 1.55 =&gt; 2.0). Current rounded value is being display in the left bottom corner with V character.
+ <img alt="" src="../img/gif_Pivot_gizmo_alt.gif" /></li>
+<li><strong>Press Shift</strong>, <strong>Ctrl</strong> or <strong>Shift+Crtl</strong> - Activate incremental system for current axis.
+ <img alt="" src="../img/gif_Pivot_gizmo_incr.gif" /></li>
+</ul>
 <h3 id="main-action">Main action:</h3>
-<ol>
-<li><strong>Press D + LMB</strong> - To set just Transform Orientation.<br></li>
-<li><strong>Press D + MMB</strong> - To set only 3D Cursor to highlighted.<br></li>
-<li><strong>Press D + RMB</strong> - To set only Origin to highlighted.<br>
- <img alt="" src="../img/gif_base_action.gif" /><br></li>
-</ol>
-<h3 id="additional-shortcuts-with-main-action-give-some-options">Additional shortcuts with main action give some options:<br></h3>
-<ol>
-<li><strong>Press D + S + LMB or RMB</strong> - To set Orientation and Origin.<br></li>
-<li><strong>Press D + C + RMB</strong> - To set 3D Cursor (<em>this suits if 2 button mouse</em>).<br></li>
-</ol>
+<ul>
+<li><strong>Press D + LMB</strong> - To set just Transform Orientation.</li>
+<li><strong>Press D + MMB</strong> - To set only 3D Cursor to highlighted.</li>
+<li><strong>Press D + RMB</strong> - To set only Origin to highlighted.
+ <img alt="" src="../img/gif_base_action.gif" /></li>
+</ul>
+<h3 id="additional-shortcuts-with-main-action-give-some-options">Additional shortcuts with main action give some options:</h3>
+<ul>
+<li><strong>Press D + S + LMB or RMB</strong> - set Origin and Orientation or vice versa.</li>
+<li><strong>Press D + C + RMB</strong> - To set 3D Cursor (<em>this suits if 2 button mouse</em>).</li>
+</ul>
 <h3 id="additional-shortcuts-while-holding-d-key">Additional shortcuts while holding <strong>D</strong> key:</h3>
-<ol>
-<li><strong>Press O</strong> - To switch On/Off Pivot to Cursor settings.<br></li>
-<li><strong>Press P</strong> - To switch On/Off SCPO into Active Transform Tools settings.<br></li>
-</ol>
+<ul>
+<li><strong>Press O</strong> - To switch On/Off Pivot to Cursor settings.</li>
+<li><strong>Press P</strong> - To switch On/Off SCPO into Active Transform Tools settings.</li>
+</ul>
 <h3 id="multiselection-submode">Multiselection submode:</h3>
-<ol>
-<li><strong>Press D + A + MMB or RMB</strong> - To activate multi selection mode for 3D Cursor or Origin.<br></li>
-<li>If <strong>release A</strong> - To set(confirm) Cursor or Origin between selection.<br></li>
-<li>If <strong>release D</strong> - To exit the mode without confirmation.<br>
+<ul>
+<li><strong>Press D + A + MMB or RMB</strong> - To activate multi selection mode for 3D Cursor or Origin.</li>
+<li>If <strong>release A</strong> - To set(confirm) Cursor or Origin between selection.</li>
+<li>If <strong>release D</strong> - To exit the mode without confirmation.
  <img alt="" src="../img/gif_multi_selection.gif" /></li>
-</ol>
-<h3 id="one-axel-submode">One axel submode:</h3>
-<ol>
-<li><strong>Press D + X or Y or Z + RMB</strong> - To set Origin to one axis.<br>
+</ul>
+<h3 id="one-axis-submode">One axis submode:</h3>
+<ul>
+<li><strong>Press D + X or Y or Z + RMB</strong> - To set Origin to one axis.
  <img alt="" src="../img/gif_xyz_origin.gif" /></li>
-</ol>
-<h3 id="bounding-box-submode">Bounding Box submode:</h3>
-<ol>
-<li><strong>Press D + B</strong> - To activate Bounding Box mode and widget.<br></li>
-<li><strong>Press D + B + MMB or RMB</strong> - To set 3D Cursor or Origin to bbox point.<br></li>
-<li><strong>'L'</strong> button in left bottom corner switch bounding box to local\world orientation.<br>
-<strong>!!!Warning!!! - World orientation('W') is heavy calculation with hipoly meshes</strong><br>
+</ul>
+<h3 id="bounding-box-gizmo">Bounding Box Gizmo:</h3>
+<ul>
+<li><strong>Press D + B</strong> - To activate Bounding Box Gizmo and widget.</li>
+<li><strong>Press D + B + MMB or RMB</strong> - To set 3D Cursor or Origin to bbox point.</li>
+<li><strong>'L'</strong> button in left bottom corner switch bounding box to local\world orientation.
+ <strong>!!!Warning!!! - World orientation('W') is heavy calculation with hipoly meshes</strong>
  <img alt="" src="../img/gif_bbox.gif" /></li>
-</ol>
+</ul>
               
             </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../preferences/" class="btn btn-neutral float-right" title="Preferences">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../changes/" class="btn btn-neutral" title="Changes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -195,6 +207,8 @@
       
         <span><a href="../changes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../preferences/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
