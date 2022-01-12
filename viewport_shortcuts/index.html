@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Shortcuts and usage - Friendly Pivot Addon Documentation</title>
+  <title>Viewport shortcuts and usage - Friendly Pivot Addon Documentation</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Shortcuts and usage";
-    var mkdocs_page_input_path = "shortcuts.md";
+    var mkdocs_page_name = "Viewport shortcuts and usage";
+    var mkdocs_page_input_path = "viewport_shortcuts.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -56,25 +56,39 @@
                     </li>
                 </ul>
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Shortcuts and usage</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Viewport shortcuts and usage</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#invoke-key">Invoke key:</a>
+    <li class="toctree-l2"><a class="reference internal" href="#invoke-key">Invoke key</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#pivot-gizmo">Pivot Gizmo:</a>
+    <li class="toctree-l2"><a class="reference internal" href="#gizmos">Gizmos</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#pivot-gizmo">Pivot Gizmo</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#main-action">Main action:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#bounding-box-gizmo">Bounding Box Gizmo</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#additional-shortcuts-with-main-action-give-some-options">Additional shortcuts with main action give some options:</a>
+        </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#additional-shortcuts-while-holding-d-key">Additional shortcuts while holding D key:</a>
+    <li class="toctree-l2"><a class="reference internal" href="#mesh-mode">Mesh mode</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#multiselection-in-mesh-mode">Multiselection in Mesh mode</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#multiselection-submode">Multiselection submode:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#one-axis-in-mesh-mode">One axis in Mesh mode</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#one-axis-submode">One axis submode:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#additional-combo-shortcuts-for-more-options-in-mesh-mode">Additional combo shortcuts for more options in Mesh mode</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#bounding-box-gizmo">Bounding Box Gizmo:</a>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bone-mode">Bone mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#curve-mode">Curve mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#additional-shortcuts-while-holding-d-key">Additional shortcuts while holding D key</a>
     </li>
     </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../uveditor_shortcuts/">UV Editor shortcuts and usage</a>
                     </li>
                 </ul>
                 <ul>
@@ -102,7 +116,7 @@
     
       
     
-    <li>Shortcuts and usage</li>
+    <li>Viewport shortcuts and usage</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -113,16 +127,17 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="shortcuts-and-usage">Shortcuts and usage</h1>
-<h3 id="invoke-key">Invoke key:</h3>
+                <h1 id="viewport-shortcuts-and-usage">Viewport shortcuts and usage</h1>
+<h2 id="invoke-key">Invoke key</h2>
 <ul>
 <li>Pressing <strong>'D'</strong> key invokes change pivot mode. While this mode is active there
- is an ability to navigate through viewport, switch submodes, change Pivot Orientation,
+ is an ability to navigate through viewport, switch actions, change Pivot Orientation,
  set 3D Cursor and Origin.</li>
 </ul>
-<h3 id="pivot-gizmo">Pivot Gizmo:</h3>
+<h2 id="gizmos">Gizmos</h2>
+<h3 id="pivot-gizmo">Pivot Gizmo</h3>
 <ul>
-<li>This visual control gives ability to set Orientation and Origin freely. Supports any blender object type.</li>
+<li>This visual control gives ability to set Orientation and Origin freely. Supports any Blender object type.</li>
 <li><strong>'P'</strong> button in left bottom corner switches On/Off Pivot gizmo.</li>
 <li>There is a value next to the <strong>'P'</strong> counting Pivot's distance for current axis(<strong>'D'</strong>) when moving/incrementing the gizmo or current rounded value(<strong>'V'</strong>) when rounding value.
  <img alt="" src="../img/gif_Pivot_gizmo.gif" /></li>
@@ -132,42 +147,59 @@
 <li><strong>Press Shift</strong>, <strong>Ctrl</strong> or <strong>Shift+Crtl</strong> - Activate incremental system for current axis.
  <img alt="" src="../img/gif_Pivot_gizmo_incr.gif" /></li>
 </ul>
-<h3 id="main-action">Main action:</h3>
+<h3 id="bounding-box-gizmo">Bounding Box Gizmo</h3>
+<ul>
+<li><strong>Press D + B</strong> - To activate Bounding Box Gizmo and widget.</li>
+<li><strong>Press D + B + MMB or RMB</strong> - To set 3D Cursor or Origin to bbox point.</li>
+<li><strong>'L'</strong> button in left bottom corner switch bounding box to local\world orientation.<br>
+ <strong>!WARNING - World orientation('W') is heavy calculation with hipoly meshes</strong>
+ <img alt="" src="../img/gif_bbox.gif" /></li>
+</ul>
+<h2 id="mesh-mode">Mesh mode</h2>
 <ul>
 <li><strong>Press D + LMB</strong> - To set just Transform Orientation.</li>
 <li><strong>Press D + MMB</strong> - To set only 3D Cursor to highlighted.</li>
 <li><strong>Press D + RMB</strong> - To set only Origin to highlighted.
  <img alt="" src="../img/gif_base_action.gif" /></li>
 </ul>
-<h3 id="additional-shortcuts-with-main-action-give-some-options">Additional shortcuts with main action give some options:</h3>
+<h3 id="multiselection-in-mesh-mode">Multiselection in Mesh mode</h3>
 <ul>
-<li><strong>Press D + S + LMB or RMB</strong> - set Origin and Orientation or vice versa.</li>
-<li><strong>Press D + C + RMB</strong> - To set 3D Cursor (<em>this suits if 2 button mouse</em>).</li>
-</ul>
-<h3 id="additional-shortcuts-while-holding-d-key">Additional shortcuts while holding <strong>D</strong> key:</h3>
-<ul>
-<li><strong>Press O</strong> - To switch On/Off Pivot to Cursor settings.</li>
-<li><strong>Press P</strong> - To switch On/Off SCPO into Active Transform Tools settings.</li>
-</ul>
-<h3 id="multiselection-submode">Multiselection submode:</h3>
-<ul>
-<li><strong>Press D + A + MMB or RMB</strong> - To activate multi selection mode for 3D Cursor or Origin.</li>
+<li><strong>Press D + A + MMB or RMB</strong> - To activate multi selection for 3D Cursor or Origin.</li>
 <li>If <strong>release A</strong> - To set(confirm) Cursor or Origin between selection.</li>
 <li>If <strong>release D</strong> - To exit the mode without confirmation.
  <img alt="" src="../img/gif_multi_selection.gif" /></li>
 </ul>
-<h3 id="one-axis-submode">One axis submode:</h3>
+<h3 id="one-axis-in-mesh-mode">One axis in Mesh mode</h3>
 <ul>
 <li><strong>Press D + X or Y or Z + RMB</strong> - To set Origin to one axis.
  <img alt="" src="../img/gif_xyz_origin.gif" /></li>
 </ul>
-<h3 id="bounding-box-gizmo">Bounding Box Gizmo:</h3>
+<h3 id="additional-combo-shortcuts-for-more-options-in-mesh-mode">Additional combo shortcuts for more options in Mesh mode</h3>
 <ul>
-<li><strong>Press D + B</strong> - To activate Bounding Box Gizmo and widget.</li>
-<li><strong>Press D + B + MMB or RMB</strong> - To set 3D Cursor or Origin to bbox point.</li>
-<li><strong>'L'</strong> button in left bottom corner switch bounding box to local\world orientation.
- <strong>!!!Warning!!! - World orientation('W') is heavy calculation with hipoly meshes</strong>
- <img alt="" src="../img/gif_bbox.gif" /></li>
+<li><strong>Press D + S + LMB or RMB</strong> - Set Origin and Orientation or vice versa.</li>
+<li><strong>Press D + S + MMB</strong> - Set 3D Cursor and Orientation.</li>
+<li><strong>Press D + C + RMB</strong> - To set 3D Cursor (<em>this suits if 2 button mouse</em>).</li>
+</ul>
+<h2 id="bone-mode">Bone mode</h2>
+<ul>
+<li><strong>Press D + V + LMB</strong> - To set Orientation.</li>
+<li><strong>Press D + V + MMB</strong> - To set 3D Cursor to highlighted.</li>
+<li><strong>Press D + V + RMB</strong> - To set Origin to highlighted.</li>
+<li><strong>!WARNING - For now it works on bones' rest position only.</strong>
+ <img alt="" src="../img/gif_bone_mode.gif" /></li>
+</ul>
+<h2 id="curve-mode">Curve mode</h2>
+<ul>
+<li><strong>Press D + G + MMB</strong> - To set 3D Cursor to highlighted point.</li>
+<li><strong>Press D + G + RMB</strong> - To set Origin to highlighted point.
+ <img alt="" src="../img/gif_curve_mode.gif" /></li>
+</ul>
+<h2 id="additional-shortcuts-while-holding-d-key">Additional shortcuts while holding <strong>D</strong> key</h2>
+<ul>
+<li><strong>Press O</strong> - To switch On/Off Pivot to Cursor settings.</li>
+<li><strong>Press P</strong> - To switch On/Off SCPO into Active Transform Tools settings.</li>
+<li><strong>Press L</strong> - To switch On/Off bake orientation to LOCAL.</li>
+<li><strong>Space</strong> - Force addon to use MMB for grabbing or panning a view not for action confimation.</li>
 </ul>
               
             </div>
@@ -176,7 +208,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../preferences/" class="btn btn-neutral float-right" title="Preferences">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../uveditor_shortcuts/" class="btn btn-neutral float-right" title="UV Editor shortcuts and usage">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../changes/" class="btn btn-neutral" title="Changes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -208,7 +240,7 @@
         <span><a href="../changes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../preferences/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../uveditor_shortcuts/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
